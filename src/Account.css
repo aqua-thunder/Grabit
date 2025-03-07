@@ -1,0 +1,24 @@
+.btn {
+    background: linear-gradient(45deg, #83c8af, #08ee9a);
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 5px #08ee9a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px #08ee9a;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
