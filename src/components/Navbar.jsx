@@ -207,6 +207,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                         </div>
                     </div>
                     <div>
+                        
 
                         {
                             isAuthenticated && <p>{user.name}</p>

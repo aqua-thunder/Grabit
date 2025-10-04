@@ -10,6 +10,13 @@
 // reload the page
 // Delete item from the localstorage
 // Auth0 = used for login , Logout functionality
+/*
+    Media qery in tailwind 
+
+ if (window.matchMedia("(max-width: 640px)").matches) {
+     window.location.href = "../chekout"; // Change to your desired URL
+ }      
+*/
 
 
 import React, { useState, useRef } from 'react'
@@ -205,7 +212,7 @@ const Home = ({ product, tranding, topRated, detail, AddWishList, fruits, vegeta
                                 return (
                                     <div className='group mt-7 rounded-md cursor-pointer relative' key={productIndex} onClick={() => { detail(productItem) }} >
                                         <div className='border border-[#ececec] w-[15vw] flex-col justify-center max-sm:border-[#c6c6c6] max-sm:w-[60vw] '>
-                                            <img src={productItem.url} alt="" width={250} className='max-sm:max-w-[46vw] max-sm:m-auto' />
+                                            <img src={productItem.url} alt="fruits" width={250} className='max-sm:max-w-[46vw] max-sm:m-auto' />
                                             <div className='invisible flex justify-evenly  w-36 m-auto  group-hover:visible group-hover:transition group-hover:delay-30 group-hover:duration-300 group-hover:ease-in-out group-hover:translate-y-[-17px] group-hover:scale-110 '>
                                                 <button className='bg-white p-1 rounded-md border hover:bg-[#e6e6e6] border-[#d9d9d9] cursor-pointer' onClick={() => notify()}><img src="images/SVGs/heart.svg" alt="heart" width={17} /></button>
                                                 <button className='bg-white p-1 rounded-md border hover:bg-[#e6e6e6] border-[#d9d9d9] cursor-pointer'><img src="images/SVGs/eye.svg" alt="eye" width={17} /></button>

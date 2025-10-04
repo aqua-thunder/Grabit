@@ -17,17 +17,17 @@ function App() {
 
   const [product, setproduct] = useState([
     {
-      url: '../images/products/1.jpg',
+      url: '/images/products/1.jpg',
       type: 'Dried Fruits',
       name: 'Mixed Nuts Berries Pack',
       price: 56,
       discount: 20,
       brand: "Classic",
-      qua: "200g",
+      qua: "2000g",
       comesIn: "Pouch"
-    },
-    {
-      url: '../images/products/2.jpg',
+    },    
+    {             
+      url: '/images/products/2.jpg',
       type: 'Cookies',
       name: 'Multi Grain Combo Cookies',
       price: 30,
@@ -37,7 +37,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/3.jpg',
+      url: '/images/products/3.jpg',
       type: 'Foods',
       name: 'Fresh Mango Juice Pack',
       price: 65,
@@ -47,17 +47,17 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/4.jpg',
+      url: '/images/products/4.jpg',
       type: 'Dried Fruits',
       name: 'Dates Value Fresh Pouch',
       price: 48,
       discount: 18,
       brand: "Classic",
       qua: "500g",
-      comesIn: "Pouch"
+      comesIn: "Pouch"                              
     },
     {
-      url: '../images/products/5.jpg',
+      url: '/images/products/5.jpg',
       type: 'Dried Fruits',
       name: 'Stick Fiber Masal Magic',
       price: 75,
@@ -67,7 +67,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/6.jpg',
+      url: '/images/products/6.jpg',
       type: 'Dried Fruits',
       name: 'Mixed Nuts Berries Pack',
       price: 56,
@@ -77,7 +77,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/7.jpg',
+      url: '/images/products/7.jpg',
       type: 'Cookies',
       name: 'Multi Grain Combo Cookies',
       price: 30,
@@ -87,7 +87,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/8.jpg',
+      url: '/images/products/8.jpg',
       type: 'Foods',
       name: 'Fresh Mango Juice Pack',
       price: 65,
@@ -97,7 +97,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/9.jpg',
+      url: '/images/products/9.jpg',
       type: 'Dried Fruits',
       name: 'Dates Value Fresh Pouch',
       price: 48,
@@ -107,7 +107,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/products/10.jpg',
+      url: '/images/products/10.jpg',
       type: 'Dried Fruits',
       name: 'Stick Fiber Masal Magic',
       price: 75,
@@ -120,21 +120,21 @@ function App() {
   const [tranding, settranding] = useState([
     [
       {
-        url: '../images/products/3.jpg',
+        url: '/images/products/3.jpg',
         type: 'Foods',
         name: 'Fresh Mango Juice Pack',
         price: 65.11,
         discount: 46.22
       },
       {
-        url: '../images/products/4.jpg',
+        url: '/images/products/4.jpg',
         type: 'Dried Fruits',
         name: 'Dates Value Fresh Pouch',
         price: 48.11,
         discount: 36.22
       },
       {
-        url: '../images/products/5.jpg',
+        url: '/images/products/5.jpg',
         type: 'Dried Fruits',
         name: 'Stick Fiber Masal Magic',
         price: 75.11,
@@ -142,21 +142,21 @@ function App() {
       }],
     [
       {
-        url: '../images/products/1.jpg',
+        url: '/images/products/1.jpg',
         type: 'Dried Fruits',
         name: 'Mixed Nuts Berries Pack',
         price: 56.11,
         discount: 45.22
       },
       {
-        url: '../images/products/2.jpg',
+        url: '/images/products/2.jpg',
         type: 'Cookies',
         name: 'Multi Grain Combo Cookies',
         price: 30.11,
         discount: 25.22
       },
       {
-        url: '../images/products/3.jpg',
+        url: '/images/products/3.jpg',
         type: 'Foods',
         name: 'Fresh Mango Juice Pack',
         price: 65.11,
@@ -166,7 +166,7 @@ function App() {
   const [topRated, settopRated] = useState([
     [
       {
-        url: '../images/fruits/1.jpg',
+        url: '/images/fruits/1.jpg',
         type: 'Dried Fruits',
         name: 'Kiwi',
         price: 56,
@@ -176,7 +176,7 @@ function App() {
         comesIn: "Pouch"
       },
       {
-        url: '../images/fruits/2.jpg',
+        url: '/images/fruits/2.jpg',
         type: 'Cookies',
         name: 'Strawberry',
         price: 30,
@@ -186,7 +186,7 @@ function App() {
         comesIn: "Pouch"
       },
       {
-        url: '../images/products/4.jpg',
+        url: '/images/products/4.jpg',
         type: 'Dried Fruits',
         name: 'Dates Value Fresh Pouch',
         price: 48.11,
@@ -194,21 +194,21 @@ function App() {
       },
     ],
     [{
-      url: '../images/products/3.jpg',
+      url: '/images/products/3.jpg',
       type: 'Foods',
       name: 'Fresh Mango Juice Pack',
       price: 65.11,
       discount: 46.22
     },
     {
-      url: '../images/products/4.jpg',
+      url: '/images/products/4.jpg',
       type: 'Dried Fruits',
       name: 'Dates Value Fresh Pouch',
       price: 48.11,
       discount: 36.22
     },
     {
-      url: '../images/fruits/3.jpg',
+      url: '/images/fruits/3.jpg',
       type: 'Foods',
       name: 'Graps',
       price: 65,
@@ -220,7 +220,7 @@ function App() {
   ])
   const [fruits, setFruits] = useState([
     {
-      url: '../images/fruits/1.jpg',
+      url: '/images/Fruits/1.jpg',
       type: 'Dried Fruits',
       name: 'Kiwi',
       price: 56,
@@ -230,7 +230,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/2.jpg',
+      url: '/images/Fruits/2.jpg',
       type: 'Cookies',
       name: 'Strawberry',
       price: 30,
@@ -240,7 +240,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/3.jpg',
+      url: '/images/Fruits/3.jpg',
       type: 'Foods',
       name: 'Graps',
       price: 65,
@@ -250,7 +250,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/4.jpg',
+      url: '/images/Fruits/4.jpg',
       type: 'Dried Fruits',
       name: 'Orange',
       price: 48,
@@ -260,7 +260,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/5.jpg',
+      url: '/images/Fruits/5.jpg',
       type: 'Dried Fruits',
       name: 'Durian',
       price: 75,
@@ -270,7 +270,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/6.jpg',
+      url: '/images/Fruits/6.jpg',
       type: 'Dried Fruits',
       name: 'Papaya',
       price: 56,
@@ -280,7 +280,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/7.jpg',
+      url: '/images/Fruits/7.jpg',
       type: 'Cookies',
       name: 'Banana',
       price: 30,
@@ -290,7 +290,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/8.jpg',
+      url: '/images/Fruits/8.jpg',
       type: 'Foods',
       name: 'Watermalan',
       price: 65,
@@ -300,7 +300,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/9.jpg',
+      url: '/images/Fruits/9.jpg',
       type: 'Dried Fruits',
       name: 'Guava',
       price: 48,
@@ -310,7 +310,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/fruits/10.jpg',
+      url: '/images/Fruits/10.jpg',
       type: 'Dried Fruits',
       name: 'Gooseberry',
       price: 75,
@@ -322,7 +322,7 @@ function App() {
   ])
   const [vegetables, setVegetables] = useState([
     {
-      url: '../images/Vegetables/1.jpg',
+      url: '/images/Vegetables/1.jpg',
       type: 'Dried Fruits',
       name: 'Lady Finger',
       price: 56,
@@ -332,7 +332,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/2.jpg',
+      url: '/images/Vegetables/2.jpg',
       type: 'Cookies',
       name: 'Cauliflower',
       price: 30,
@@ -342,7 +342,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/3.jpg',
+      url: '/images/Vegetables/3.jpg',
       type: 'Foods',
       name: 'Capsicum',
       price: 65,
@@ -352,7 +352,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/4.jpg',
+      url: '/images/Vegetables/4.jpg',
       type: 'Dried Fruits',
       name: 'Brocoli',
       price: 48,
@@ -362,7 +362,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/5.jpg',
+      url: '/images/Vegetables/5.jpg',
       type: 'Dried Fruits',
       name: 'Carrot',
       price: 75,
@@ -372,7 +372,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/6.jpg',
+      url: '/images/Vegetables/6.jpg',
       type: 'Dried Fruits',
       name: 'Brinjal',
       price: 56,
@@ -382,7 +382,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/7.jpg',
+      url: '/images/Vegetables/7.jpg',
       type: 'Cookies',
       name: 'Spinach',
       price: 30,
@@ -392,7 +392,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/8.jpg',
+      url: '/images/Vegetables/8.jpg',
       type: 'Foods',
       name: 'Cucumbar',
       price: 65,
@@ -402,7 +402,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/9.jpg',
+      url: '/images/Vegetables/9.jpg',
       type: 'Dried Fruits',
       name: 'Potato',
       price: 48,
@@ -412,7 +412,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/10.jpg',
+      url: '/images/Vegetables/10.jpg',
       type: 'Dried Fruits',
       name: 'Beetroot',
       price: 75,
@@ -422,7 +422,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/11.jpg',
+      url: '/images/Vegetables/11.jpg',
       type: 'Dried Fruits',
       name: 'Gooseberry',
       price: 75,
@@ -432,7 +432,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/12.jpg',
+      url: '/images/Vegetables/12.jpg',
       type: 'Dried Fruits',
       name: 'Garlic',
       price: 75,
@@ -442,7 +442,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/13.jpg',
+      url: '/images/Vegetables/13.jpg',
       type: 'Dried Fruits',
       name: 'Bitter Gourd',
       price: 75,
@@ -452,7 +452,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/14.jpg',
+      url: '/images/Vegetables/14.jpg',
       type: 'Dried Fruits',
       name: 'Arrowroot',
       price: 75,
@@ -462,7 +462,7 @@ function App() {
       comesIn: "Pouch"
     },
     {
-      url: '../images/Vegetables/15.jpg',
+      url: '/images/Vegetables/15.jpg',
       type: 'Dried Fruits',
       name: 'Elephant Foot Yam',
       price: 75,

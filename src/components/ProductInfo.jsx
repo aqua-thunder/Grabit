@@ -78,7 +78,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                     </div>
                 </div>
                 <div className='flex mt-20 gap-6 '>
-                    <div className=''>
+                    <div>
                         <ul className='bg-[#f8f8fb] font-bold text-[#4b5966] w-[19vw] px-5 py-3 rounded-md border border-[#e2e2e2] max-sm:w-[70vw] max-sm:hidden'>
                             <div>
                                 <div className='flex justify-between border-b-1 border-[#e7e7e7] cursor-pointer' onClick={() => { clickCategory() }}>
