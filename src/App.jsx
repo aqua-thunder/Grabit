@@ -570,9 +570,8 @@ function App() {
 
   return (
     <>
-      <div className='py-14 px-24 max-sm:w-[318vw]  '>
+      <div className='lg:py-14 md:py-14 lg:px-24 md:px-24 px-5 py-5 '>
         <RouterProvider router={router} />
-
       </div>
     </>
   )

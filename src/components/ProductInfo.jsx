@@ -152,12 +152,12 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                         </ul>
                     </div>
                     <div>
-                        <div className='flex gap-7 max-sm:grid max-sm:grid-cols-2 '>
-                            <div>
+                        <div className=' gap-7 lg:grid lg:grid-cols-2 grid grid-cols-1 justify-center'>
+                            <div className='mx-auto'>
                                 {
                                     Info?.map((productItem, productIndex) => {
                                         return (
-                                            <div className='border border-[#dedede] w-[30vw] rounded-md max-sm:w-[100%]' key={productIndex}>
+                                            <div className='border border-[#dedede] lg:w-[30vw] rounded-md w-[100%] mx-auto' key={productIndex}>
                                                 <img src={productItem.url} alt="" />
                                             </div>
                                         )

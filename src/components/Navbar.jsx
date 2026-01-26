@@ -134,86 +134,130 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
 
     return (
         <>
-            <div id="element_target" className='flex justify-between items-center pb-10 max-sm:w-[260vw]  '>
+            <div id="element_target" className='lg:flex lg:justify-between md:flex md:justify-between items-center pb-10'>
                 <div >
-                    <Link to="/"><img src="images/logo.png" alt="logo" className='w-[10vw] max-sm:w-[30vw]' /></Link>
+                    <Link to="/"><img src="images/logo.png" alt="logo" className='lg:w-[10vw]  w-[32vw]' /></Link>
                 </div>
-                <div className="input flex items-center border border-[#ededed] rounded-md  py-3 px-3 max-sm:border-[#dad9d9] ">
-                    <input type="text" placeholder='Search Products...' className='w-[37vw] outline-none max-sm:w-[90vw] ' name="search" id="search" />
-                    <div className='group'>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/fkdzyfle.json"
-                            trigger="hover"
-                            colors="primary:#4b5966"
-                            style={{ "width": "22px", "height": "22px" }}>
-                        </lord-icon>
-                    </div>
+               
+                {/* Chage i have made */}
 
-                </div>
-                <ul className='flex space-x-6'>
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3">
 
-                    {
-                        isAuthenticated ?
-                            <button className='group flex items-center gap-3 cursor-pointer ' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/hrjifpbq.json"
-                                    trigger="hover"
-                                    colors="primary:#4b5966"
-                                    style={{ "width": "32px", "height": "32px" }}>
-                                </lord-icon>
-                                <div className='text-[13px] '>
-                                    <div className='font-bold text-gray-400  group-hover:text-[#5caf90]'>Account</div>
-                                    <div className='font-semibold text-gray-700'>LOGOUT</div>
-                                </div>
-                            </button>
-                            :
-                            <button className='group flex items-center gap-3 cursor-pointer ' onClick={() => loginWithRedirect()}>
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/hrjifpbq.json"
-                                    trigger="hover"
-                                    colors="primary:#4b5966"
-                                    style={{ "width": "32px", "height": "32px" }}>
-                                </lord-icon>
-                                <div className='text-[13px] '>
-                                    <div className='font-bold text-gray-400  group-hover:text-[#5caf90]'>Account</div>
-                                    <div className='font-semibold text-gray-700'>LOGIN</div>
-                                </div>
-                            </button>
-                    }
-
-
-                    <Link to="/wishList" className='group flex items-center gap-3 cursor-pointer' >
-                        <lord-icon
-                            src="https://cdn.lordicon.com/ulnswmkk.json"
-                            trigger="hover"
-                            colors="primary:#4b5966"
-                            style={{ "width": "32px", "height": "32px" }}>
-                        </lord-icon>
-                        <div className='text-[13px] '>
-                            <div className='font-bold text-gray-400 group-hover:text-[#5caf90]'>Wishlist</div>
-                            <div className='font-semibold text-gray-700'>{WL}-ITEMS</div>
-                        </div>
-                    </Link>
-                    <div className='group flex items-center gap-3 cursor-pointer ' onClick={() => { AddToCart() }}>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/mqdkoaef.json"
-                            trigger="hover"
-                            colors="primary:#4b5966"
-                            style={{ "width": "32px", "height": "32px" }}>
-                        </lord-icon>
-                        <div className='text-[13px] '>
-                            <div className='font-bold text-gray-400 group-hover:text-[#5caf90]'>Cart</div>
-                            <div className='font-semibold text-gray-700'>{CartLength}-ITEMS</div>
+                    {/* Search Box */}
+                    <div className="input flex items-center border lg:border-none border-[#ededed] rounded-md py-3 px-3 
+                    w-full md:w-[40vw]">
+                        <input
+                            type="text"
+                            placeholder="Search Products..."
+                            className="w-full outline-none text-base hidden lg:block md:block"
+                            name="search"
+                            id="search"
+                        />
+                        <div className="group hidden lg:block">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fkdzyfle.json"
+                                trigger="hover"
+                                colors="primary:#4b5966"
+                                style={{ width: "26px", height: "26px" }}   // bigger for mobile
+                            />
                         </div>
                     </div>
-                    <div>
-                        
 
+                    {/* Right Section */}
+                    <ul className="flex items-center justify-between w-full md:w-auto gap-6 mt-3 md:mt-0">
+
+                        {/* Login / Logout */}
                         {
-                            isAuthenticated && <p>{user.name}</p>
+                            isAuthenticated ? (
+                                <button
+                                    className="group flex items-center gap-3 cursor-pointer"
+                                    onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                                >
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/hrjifpbq.json"
+                                        trigger="hover"
+                                        colors="primary:#4b5966"
+                                        style={{ width: "36px", height: "36px" }}   // larger on mobile
+                                    />
+                                    <div className="text-sm md:text-[13px]">
+                                        <div className="font-bold text-gray-400 group-hover:text-[#5caf90]">
+                                            Account
+                                        </div>
+                                        <div className="font-semibold text-gray-700">
+                                            LOGOUT
+                                        </div>
+                                    </div>
+                                </button>
+                            ) : (
+                                <button
+                                    className="group flex items-center gap-3 cursor-pointer"
+                                    onClick={() => loginWithRedirect()}
+                                >
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/hrjifpbq.json"
+                                        trigger="hover"
+                                        colors="primary:#4b5966"
+                                        style={{ width: "36px", height: "36px" }}
+                                    />
+                                    <div className="text-sm md:text-[13px]">
+                                        <div className="font-bold text-gray-400 group-hover:text-[#5caf90]">
+                                            Account
+                                        </div>
+                                        <div className="font-semibold text-gray-700 lg:block hidden">
+                                            LOGIN
+                                        </div>
+                                    </div>
+                                </button>
+                            )
                         }
-                    </div>
-                </ul>
+
+                        {/* Wishlist */}
+                        <Link to="/wishList" className="group flex items-center gap-3 cursor-pointer">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ulnswmkk.json"
+                                trigger="hover"
+                                colors="primary:#4b5966"
+                                style={{ width: "36px", height: "36px" }}
+                            />
+                            <div className="text-sm md:text-[13px]">
+                                <div className="font-bold text-gray-400 group-hover:text-[#5caf90]">
+                                    Wishlist
+                                </div>
+                                <div className="font-semibold text-gray-700 lg:block md:block hidden">
+                                    {WL}-ITEMS
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Cart */}
+                        <div className="group flex items-center gap-3 cursor-pointer" onClick={AddToCart}>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/mqdkoaef.json"
+                                trigger="hover"
+                                colors="primary:#4b5966"
+                                style={{ width: "36px", height: "36px" }}
+                            />
+                            <div className="text-sm md:text-[13px]">
+                                <div className="font-bold text-gray-400 group-hover:text-[#5caf90]">
+                                    Cart
+                                </div>
+                                <div className="font-semibold text-gray-700 lg:block md:block hidden">
+                                    {CartLength}-ITEMS
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Username */}
+                        {isAuthenticated && (
+                            <p className="text-base md:text-sm font-semibold text-gray-700">
+                                {user.name}
+                            </p>
+                        )}
+                    </ul>
+                </div>
+
+                {/* Chage i have made */}
+
             </div>
             <div className='w-0 h-0 overflow-x-hidden right-0 fixed z-10 top-0 bg-white ' id='cart'>
                 <div className='flex justify-between  items-center px-3 py-3'>
@@ -287,7 +331,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
             <div onMouseLeave={() => { homeOut(), categoriesOut(), productsOut(), blogOut(), pagesOut() }}>
                 <div className='line bg-[#e1e1e1] h-[1px] w-full  ' ></div>
                 <div className='mt-1 flex items-center justify-between max-sm:justify-around' >
-                    <div className='bg-[#5caf90] w-52 flex items-center py-3 px-3 space-x-3 rounded-md cursor-pointer '>
+                    <div className='bg-[#5caf90] w-52 flex items-center py-3 px-3 space-x-3 rounded-md cursor-pointer hidden md:hidden lg:block'>
                         <lord-icon
                             src="https://cdn.lordicon.com/jnikqyih.json"
                             trigger="hover"
@@ -302,29 +346,29 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                             style={{ "width": "27px", "height": "27px" }}>
                         </lord-icon>
                     </div>
-                    <ul className='flex items-center space-x-10' >
+                    <ul className='lg:flex lg:items-center hidden space-x-10' >
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { home(), categoriesOut(), productsOut(), blogOut(), pagesOut() }}  >
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]' >Home</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]' >Home</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { categories(), homeOut(), productsOut(), blogOut(), pagesOut() }}>
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]'>Categories</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]'>Categories</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { products(), homeOut(), categoriesOut(), blogOut(), pagesOut() }}>
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]'>Products</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]'>Products</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { blog(), productsOut(), homeOut(), categoriesOut(), pagesOut() }}>
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]'>Blog</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]'>Blog</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { pages(), blogOut(), productsOut(), homeOut(), categoriesOut() }}>
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]'>Pages</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]'>Pages</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                         <li className='flex items-center gap-1 cursor-pointer'>
-                            <span className='text-[#4b5966] font-semibold text-sm hover:text-[#5caf90]' onMouseOver={() => { pagesOut() }}>Offers</span>
+                            <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]' onMouseOver={() => { pagesOut() }}>Offers</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                     </ul>

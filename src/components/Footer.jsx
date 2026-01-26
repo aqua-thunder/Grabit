@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-            <div className='footer mt-20 flex justify-around max-sm:mt-0  '>
+            <div className='footer mt-20 lg:flex lg:justify-around '>
                 <div className=' w-[21vw] space-y-5 max-sm:w-[90vw]'>
                     <img src="images/logo.png" alt="logo" width={150} />
                     <span className='text-gray-400 font-medium'>Grabit is the biggest market of grocery products. Get your daily needs from our store.</span>
@@ -61,8 +61,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <ul className='text-gray-400 space-y-3'>
-                        <li className='text-[#4b5966] font-bold text-lg'>Contact</li>
+                    <ul className='text-gray-400 space-y-3 mt-10 lg:mt-0'>
+                        <li className='text-[#4b5966] font-bold text-2xl lg:text-lg'>Contact</li>
                         <div className="line h-[1px] bg-[#e7e7e7] w-[100%] mt-3"></div>
 
                         <li className='flex items-center gap-2'>
@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <a id='link' href='#element_target' className='absolute right-28 cursor-pointer max-sm:right-[58vw]'><img src="images/SVGs/up-arrow.svg" alt="up arrow" width={46} /></a>
+            <a id='link' href='#element_target' className='absolute lg:right-28 right-5 cursor-pointer '><img src="images/SVGs/up-arrow.svg" alt="up arrow" width={46} /></a>
 
         </>
     )
