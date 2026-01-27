@@ -141,7 +141,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                
                 {/* Chage i have made */}
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4  py-3">
 
                     {/* Search Box */}
                     <div className="input flex items-center border lg:border-none border-[#ededed] rounded-md py-3 px-3 

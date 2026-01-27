@@ -153,11 +153,11 @@ const Home = ({ product, tranding, topRated, detail, AddWishList, fruits, vegeta
                 <div className='Deal mt-10'>
                     <h1 className='text-[25px] font-bold text-[#4b5966] '>Day Of The <span className='text-[#5caf90]'>Deal</span></h1>
                     <span className='text-gray-400 text-sm mt-5'>Don't wait. The time will never be just right.</span>
-                    <div className='lg:grid lg:grid-cols-5 gap-7  grid-cols-1'>
+                    <div className='lg:grid lg:grid-cols-5 gap-3 grid  grid-cols-2'>
                         {
                             product.map((productItem, productIndex) => {
                                 return (
-                                    <div className='group mt-7 rounded-md cursor-pointer relative' key={productIndex}  >
+                                    <div className='group mt-7 rounded-t-lg cursor-pointer relative' key={productIndex}  >
                                         <div className='border border-[#ececec] lg:w-[15vw] flex-col justify-center  max-sm:border-[#c6c6c6] w-[100%]' >
                                             <img src={productItem.url} alt="" width={250} className='w-56 mx-auto' />
                                             <div className='invisible flex justify-evenly  w-36 m-auto  group-hover:visible group-hover:transition group-hover:delay-30 group-hover:duration-300 group-hover:ease-in-out group-hover:translate-y-[-17px] group-hover:scale-110 '>
@@ -168,7 +168,7 @@ const Home = ({ product, tranding, topRated, detail, AddWishList, fruits, vegeta
                                             </div>
                                         </div>
                                         <Link to="/detail" className='' onClick={() => { detail(productItem) }}>
-                                            <div className='relative lg:w-[15vw] px-5 space-y-3 border border-[#ececec] h-48 rounded-md w-[100%] max-sm:border-[#c6c6c6] max-md:h-44'>
+                                            <div className='relative lg:w-[15vw] px-5 space-y-3 border border-[#ececec] h-48 rounded-b-lg w-[100%] max-sm:border-[#c6c6c6] max-md:h-44'>
                                                 <div className='text-sm text-gray-400 mt-3 '>{productItem.type}</div>
                                                 <div className='text-gray-400 font-semibold '>{productItem.name}</div>
                                                 <div className='absolute pb-5 bottom-0 max-sm:bottom-0'>

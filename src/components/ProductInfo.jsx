@@ -157,7 +157,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                                 {
                                     Info?.map((productItem, productIndex) => {
                                         return (
-                                            <div className='border border-[#dedede] lg:w-[30vw] rounded-md w-[100%] mx-auto' key={productIndex}>
+                                            <div className='border border-[#dedede] lg:w-[30vw] rounded-md w-52 mx-auto' key={productIndex}>
                                                 <img src={productItem.url} alt="" />
                                             </div>
                                         )
@@ -168,7 +168,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                                 {
                                     Info?.map((productItem, productIndex) => {
                                         return (
-                                            <div className='text-[#4b5966] space-y-4  w-[32vw] max-sm:w-[100%]' key={productIndex}>
+                                            <div className='text-[#4b5966] space-y-4  lg:w-[32vw] w-[20vw]' key={productIndex}>
                                                 <span className='text-2xl font-semibold '>{productItem.name}</span>
                                                 <div className='flex mt-5'>
                                                     <img src="images/star.png" alt="star" width={15} />
