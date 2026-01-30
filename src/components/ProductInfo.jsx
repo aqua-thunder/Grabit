@@ -71,15 +71,15 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
     return (
         <div id='prInfo'>
             <div>
-                <div className='flex justify-between border border-[#e2e2e2] px-6 py-3 rounded-md'>
+                <div className='flex flex-col md:flex-row justify-between border border-[#e2e2e2] px-4 md:px-6 py-3 rounded-md gap-2 md:gap-0'>
                     <span className='font-bold text-[#4b5966]'>Product Page</span>
                     <div>
                         <span className='text-sm font-semibold text-[#4b5966]'>Home <span className='text-[#5caf90]'>{">"} Product Page</span> </span>
                     </div>
                 </div>
-                <div className='flex mt-20 gap-6 '>
+                <div className='flex flex-col lg:flex-row mt-6 md:mt-10 lg:mt-20 gap-6 '>
                     <div>
-                        <ul className='bg-[#f8f8fb] font-bold text-[#4b5966] w-[19vw] px-5 py-3 rounded-md border border-[#e2e2e2] max-sm:w-[70vw] max-sm:hidden'>
+                        <ul className='hidden lg:block bg-[#f8f8fb] font-bold text-[#4b5966] w-full lg:w-[19vw] px-5 py-3 rounded-md border border-[#e2e2e2]'>
                             <div>
                                 <div className='flex justify-between border-b-1 border-[#e7e7e7] cursor-pointer' onClick={() => { clickCategory() }}>
                                     <li className='py-4'>Category</li>
@@ -152,12 +152,12 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                         </ul>
                     </div>
                     <div>
-                        <div className=' gap-7 lg:grid lg:grid-cols-2 grid grid-cols-1 justify-center'>
+                        <div className=' gap-7 grid grid-cols-1 lg:grid-cols-2 justify-center w-full'>
                             <div className='mx-auto'>
                                 {
                                     Info?.map((productItem, productIndex) => {
                                         return (
-                                            <div className='border border-[#dedede] lg:w-[30vw] rounded-md w-52 mx-auto' key={productIndex}>
+                                            <div className='border border-[#dedede] w-full max-w-sm lg:w-[30vw] rounded-md mx-auto' key={productIndex}>
                                                 <img src={productItem.url} alt="" />
                                             </div>
                                         )
@@ -168,7 +168,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                                 {
                                     Info?.map((productItem, productIndex) => {
                                         return (
-                                            <div className='text-[#4b5966] space-y-4  lg:w-[32vw] w-[20vw]' key={productIndex}>
+                                            <div className='text-[#4b5966] space-y-4 w-full lg:w-[32vw]' key={productIndex}>
                                                 <span className='text-2xl font-semibold '>{productItem.name}</span>
                                                 <div className='flex mt-5'>
                                                     <img src="images/star.png" alt="star" width={15} />
@@ -192,7 +192,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                                                     <li className='font-bold list-disc'>Quantity : <span className='font-normal'>{productItem.qua}</span></li>
                                                     <li className='font-bold list-disc'>Outer Material : <span className='font-normal'>A Gragde Standard Quality</span></li>
                                                 </ul>
-                                                <div className='flex justify-evenly mt-10'>
+                                                <div className='flex flex-wrap justify-center md:justify-start gap-4 mt-10'>
                                                     <div className='items-center text-lg font-bold rounded-md border border-[#ebebeb] w-32 flex justify-between cursor-pointer'>
                                                         <button className='cursor-pointer p-2 px-3' onClick={() => decrese()}>-</button>
                                                         <span>{count}</span>
@@ -213,7 +213,7 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                                 }
                             </div>
                         </div>
-                        <div className='flex justify-between mt-10'>
+                        <div className='flex flex-col md:flex-row justify-between mt-10 gap-4'>
                             {
                                 product.slice(0, 3).map((productItem, productIndex) => {
                                     return (
@@ -232,13 +232,13 @@ const Detail = ({ productDetail, product, AddToCart, AddWishList, detail }, prop
                             }
                         </div>
                         <div>
-                            <div className='flex gap-3 mt-10'>
+                            <div className='flex flex-wrap gap-3 mt-10'>
                                 <button className='hover:bg-[#5caf90] transition-all hover:text-white border border-gray-300 px-4 font-semibold py-2 rounded-md'>Detail</button>
                                 <button className='hover:bg-[#5caf90] transition-all hover:text-white border border-gray-300 px-4 font-semibold py-2 rounded-md'>Specification</button>
                                 <button className='hover:bg-[#5caf90] transition-all hover:text-white border border-gray-300 px-4 font-semibold py-2 rounded-md'>Vendor</button>
                                 <button className='hover:bg-[#5caf90] transition-all hover:text-white border border-gray-300 px-4 font-semibold py-2 rounded-md'>Reviews</button>
                             </div>
-                            <div className='border border-gray-200 px-10 mt-3 rounded-md pb-5'>
+                            <div className='border border-gray-200 px-4 md:px-10 mt-3 rounded-md pb-5'>
                                 <div className='mt-7  text-[#4b5966] font-semibold text-sm/6'>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam aliquid voluptas quos quis animi dolore, rem et nemo rerum facilis labore dolor cum repellat ipsum debitis tempora dolores exercitationem, libero sapiente deserunt quam dolorum modi quia. Quia iusto non cum cumque velit quod doloremque ipsum corrupti exercitationem, blanditiis dolorum cupiditate ad, commodi omnis debitis veniam sit. Quasi necessitatibus nesciunt vitae sapiente voluptatum magni cupiditate maxime repudiandae vel, quae tempora exercitationem, quia sunt accusamus. Aperiam accusantium asperiores exercitationem sit, nihil deleniti eum ad aspernatur ea officiis laudantium magni, laboriosam harum sapiente odio esse impedit, corrupti vero praesentium quisquam nam natus. Laborum?
                                 </div>
