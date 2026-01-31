@@ -134,22 +134,22 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
 
     return (
         <>
-            <div id="element_target" className='lg:flex lg:justify-between md:flex md:justify-between items-center pb-10'>
+            <div id="element_target" className='lg:flex lg:justify-between md:flex md:justify-between items-center pb-5 lg:pb-10 px-4 md:px-8'>
                 <div >
-                    <Link to="/"><img src="images/logo.png" alt="logo" className='lg:w-[10vw]  w-[32vw]' /></Link>
+                    <Link to="/"><img src="images/logo.png" alt="logo" className='w-32 md:w-40 lg:w-[10vw]' /></Link>
                 </div>
-               
+
                 {/* Chage i have made */}
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4  py-3">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-3 w-full md:w-auto">
 
                     {/* Search Box */}
-                    <div className="input flex items-center border lg:border-none border-[#ededed] rounded-md py-3 px-3 
-                    w-full md:w-[40vw]">
+                    <div className="input flex items-center border border-[#ededed] rounded-md py-2 px-3 
+                    w-full md:w-[35vw] lg:w-[40vw]">
                         <input
                             type="text"
                             placeholder="Search Products..."
-                            className="w-full outline-none text-base hidden lg:block md:block"
+                            className="w-full outline-none text-base"
                             name="search"
                             id="search"
                         />
@@ -255,9 +255,6 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                         )}
                     </ul>
                 </div>
-
-                {/* Chage i have made */}
-
             </div>
             <div className='w-0 h-0 overflow-x-hidden right-0 fixed z-10 top-0 bg-white ' id='cart'>
                 <div className='flex justify-between  items-center px-3 py-3'>
@@ -331,7 +328,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
             <div onMouseLeave={() => { homeOut(), categoriesOut(), productsOut(), blogOut(), pagesOut() }}>
                 <div className='line bg-[#e1e1e1] h-[1px] w-full  ' ></div>
                 <div className='mt-1 flex items-center justify-between max-sm:justify-around' >
-                    <div className='bg-[#5caf90] w-52 flex items-center py-3 px-3 space-x-3 rounded-md cursor-pointer hidden md:hidden lg:block'>
+                    <div className='bg-[#5caf90] w-52 flex items-center py-3 px-3 space-x-3 rounded-md cursor-pointer hidden md:flex'>
                         <lord-icon
                             src="https://cdn.lordicon.com/jnikqyih.json"
                             trigger="hover"
@@ -346,7 +343,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                             style={{ "width": "27px", "height": "27px" }}>
                         </lord-icon>
                     </div>
-                    <ul className='lg:flex lg:items-center hidden space-x-10' >
+                    <ul className='md:flex md:items-center hidden space-x-4 lg:space-x-10' >
                         <li className='flex items-center gap-1 cursor-pointer' onMouseOver={() => { home(), categoriesOut(), productsOut(), blogOut(), pagesOut() }}  >
                             <span className='text-[#4b5966] font-semibold text-2xl md:text-sm lg:text-sm hover:text-[#5caf90]' >Home</span>
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
@@ -372,7 +369,7 @@ const Navbar = ({ CartLength, WL, AC, handleDelete }) => {
                             <img src="images/SVGs/down.svg" alt="down" width={20} />
                         </li>
                     </ul>
-                    <div className='bg-[#5caf90] text-white font-semibold w-52 flex items-center py-3 px-3 rounded-md sp cursor-pointer max-sm:hidden '>
+                    <div className='bg-[#5caf90] text-white font-semibold w-52 flex items-center py-3 px-3 rounded-md sp cursor-pointer hidden lg:flex '>
                         <img src="images/SVGs/location-white.svg" alt="down" width={25} />
                         <div className='ml-3'>New York</div>
                         <img src="images/SVGs/down-white.svg" alt="down" width={20} className='ml-14 ' />
